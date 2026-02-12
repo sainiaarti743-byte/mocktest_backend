@@ -20,20 +20,21 @@ router.post('/admin/login',adminLogin);
 
 
 
-// router.get('/create-admin', async (req, res) => {
-//     const bcrypt = require('bcryptjs')
+router.get('/create-admin', async (req, res) => {
+  const bcrypt = require('bcryptjs');
+  const User = require('../models/user');
 
-//     const User = require('../models/user');
-//     const hash = await bcrypt.hash("admin123", 10);
+  const hash = await bcrypt.hash("admin123", 10);
 
-//     const admin = await User.create({
-//         name: "Super Admin",
-//         email: 'admin@gmail.com',
-//         password: hash,
-//         role: 'admin'
-//     });
-//     res.json(admin)
-// })
+  const admin = await User.create({
+    name: "Super Admin",
+    email: "admin@gmail.com",
+    password: hash,
+    role: "admin"
+  });
+
+  res.json(admin);
+});
 
 
 module.exports = router;
