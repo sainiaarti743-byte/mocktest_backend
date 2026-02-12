@@ -36,6 +36,8 @@ app.use('/api/pdf',require('./routes/pdf.routes'))
 app.use('/api/notes',require('./routes/notes.routes'))
 app.use('/api/video',require('./routes/video.routes'))
 
+app.use('api/login',require('./routes/login.routes'))
+
 app.get('/',(req,res)=>{
     res.send('server runing')
 })
