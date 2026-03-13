@@ -16,6 +16,7 @@ const router = express.Router();
 const {adminLogin} = require('../controllers/userController');
 
 
+
 router.post('/admin/login',adminLogin);
 
 
