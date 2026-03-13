@@ -25,3 +25,4 @@ exports.deleteClass = async (req, res) => {
     await Class.findByIdAndDelete(req.params.id);
     res.json({ message: "Class deleted" });
 };
+

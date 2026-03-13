@@ -30,13 +30,14 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/user',require('./routes/userRoute'))
+
 app.use('/api/class',require('./routes/class.routes'))
 app.use('/api/mocktest',require('./routes/mocktest.routes'))
 app.use('/api/pdf',require('./routes/pdf.routes'))
 app.use('/api/notes',require('./routes/notes.routes'))
 app.use('/api/video',require('./routes/video.routes'))
 
-app.use('api/login',require('./routes/login.routes'))
+app.use('/api/app',require('./routes/login.routes'))
 
 app.get('/',(req,res)=>{
     res.send('server runing')
