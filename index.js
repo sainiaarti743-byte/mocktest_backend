@@ -38,6 +38,7 @@ app.use('/api/notes',require('./routes/notes.routes'))
 app.use('/api/video',require('./routes/video.routes'))
 
 app.use('/api/app',require('./routes/login.routes'))
+app.use('/api/app',require('./routes/banner.routes'))
 
 app.get('/',(req,res)=>{
     res.send('server runing')
