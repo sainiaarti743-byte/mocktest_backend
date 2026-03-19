@@ -39,6 +39,7 @@ app.use('/api/video',require('./routes/video.routes'))
 
 app.use('/api/app',require('./routes/login.routes'))
 app.use('/api/app',require('./routes/banner.routes'))
+app.use('/api/app',require('./routes/course.routes'))
 
 app.get('/',(req,res)=>{
     res.send('server runing')
